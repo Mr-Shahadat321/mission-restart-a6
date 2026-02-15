@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- tailwind and dailsy khala -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title and style.css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>E-commerce application design</title>
+  </head>
+  <body>
+    <body>
+    <header class="w-11/12 mx-auto">
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <a class="btn btn-ghost text-xl text-blue-600">SwiftCard</a>
+        </div>
+        <div class="navbar-center lg:flex hidden">
+              <ul class="menu menu-horizontal px-1 gap-6 font-semibold">
+            <li>Home</li>
+            <li class="text-blue-600">Products</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <div class="dropdown lg:hidden">
+     <label tabindex="0" class="btn btn-ghost">
+    <i class="fa-solid fa-bars text-xl"></i>
+   </label>
+           <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-40">
+           <li>Home</li>
+            <li class="text-blue-600">Products</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+           </div>
+          <a href=""><i class="fa-solid fa-cart-arrow-down"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <section class="banner">
+        <div class="h-[500px] bg-cover bg-center flex items-center"
+          style ="background-image: linear-gradient(to right, rgba(0,0,0,0.8),
+           rgba(0,0,0,0.3)),
+          url('./Assets/banner-image.png')">
+          <div class="w-11/12 mx-auto pl-5">
+            <h1 class="text-4xl text-white font-semibold">Best Collection For You</h1>
+              <p class="text-white py-4">Discover the latest trend in fashion, electronics and more. <br>Shop with confidence and style at SwiftCart</p>
+           <button class="btn btn-active btn-primary">Shop Now</button>
+          </div>
+        </div>
+    </section>
+
+    
+  </body>
+</html>
