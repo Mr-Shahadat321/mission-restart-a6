@@ -17,13 +17,17 @@ nav_products.addEventListener("click", (e) => {
   products_section.classList.remove("hidden");
 });
 
+
+
 const loadCategories = () => {
   fetch("https://fakestoreapi.com/products/categories")
     .then((res) => res.json())
     .then((data) => displayCategory(data));
 };
 
+//All products
 const loadProduct = (category) => {
+    
   let url = "";
   if (category === "All") {
     url = "https://fakestoreapi.com/products";
@@ -34,6 +38,10 @@ const loadProduct = (category) => {
     .then((res) => res.json())
     .then((data) => loadProducts(data));
 };
+
+
+
+
 
 // {
 //     "id": 17,
@@ -51,7 +59,7 @@ const loadProduct = (category) => {
 const loadProducts = (products) => {
   // console.log(products);
   const productContainer = document.getElementById("product-container");
-  //productContainer.innerHTML = "";
+  productContainer.innerHTML = "";
   products.forEach(product => {
     console.log(product);
      const productCard = document.createElement("div")
@@ -73,15 +81,14 @@ const loadProducts = (products) => {
               
               </div>
 
-              <h4 class="font-semibold text-gray-800 mt-3">
+              <h4 class="font-semibold text-gray-800 mt-3 truncate ..."">
                 ${product.title}
               </h4>
               <p class="font-bold text-gray-900 mt-2">${product.price}</p>
 
               <div class="flex gap-3 mt-4">
-                <button
-                  class="w-1/2 border border-gray-300 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-100"
-                >
+                <button 
+                  class="w-1/2 border border-gray-300 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-100" onclick="my_modal_5.showModal()">
                   Details
                 </button>
                 <button
@@ -106,7 +113,7 @@ const displayCategory = (categories) => {
     console.log(category);
     const catDiv = document.createElement("div");
     catDiv.innerHTML = `
-                    <button onclick = "loadProduct('${category}')" class= "btn rounded-full hover:bg-blue-300 border-blue px-10 py-3">${category}</button>
+                    <button onclick = "loadProduct(\`${category}\`)" class= "btn rounded-full hover:bg-blue-300 border-blue px-10 py-3">${category}</button>
             
         `;
     categoriesContainer.append(catDiv);

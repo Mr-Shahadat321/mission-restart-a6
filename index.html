@@ -282,22 +282,38 @@
         </div>
          
       </section>
-
+<!-- modal -->
+ <section>
+  <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+ </section>
     <!-- FOOTER -->
     <footer class="bg-slate-900 text-gray-300 pt-16 pb-8">
-      <div class="max-w-6xl mx-auto px-4">
+       <div class="max-w-6xl mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
-          <div>
-            <h3 class="text-xl font-bold text-indigo-500 mb-4">SwiftCart</h3>
-            <p class="text-sm text-gray-400">
+          <div
+              <h3 class="text-xl font-bold text-indigo-500 mb-4">SwiftCart</h3>
+             <p class="text-sm text-gray-400">
               Your one-stop shop for fashion and lifestyle needs.
             </p>
           </div>
           <div>
             <h4 class="font-semibold text-white mb-4">Quick Links</h4>
             <ul class="space-y-2 text-sm">
-              <li><a href="#" class="hover:text-white">Home</a></li>
-              <li><a href="#" class="hover:text-white">Products</a></li>
+            <li><a href="#" class="hover:text-white">Home</a></li>
+             <li><a href="#" class="hover:text-white">Products</a></li>
               <li><a href="#" class="hover:text-white">About</a></li>
               <li><a href="#" class="hover:text-white">Contact</a></li>
             </ul>
@@ -305,14 +321,14 @@
           <div>
             <h4 class="font-semibold text-white mb-4">Support</h4>
             <ul class="space-y-2 text-sm">
-              <li><a href="#" class="hover:text-white">FAQ</a></li>
-              <li><a href="#" class="hover:text-white">Shipping</a></li>
+              <li><a href="#" class=" hover:text-white">FAQ</a></li>
+              <li><a href="#" class=" hover:text-white">Shipping</a></li>
               <li><a href="#" class="hover:text-white">Returns</a></li>
-              <li><a href="#" class="hover:text-white">Privacy</a></li>
+               <li><a href="#" class="hover:text-white">Privacy</a></li>
             </ul>
           </div>
-          <div>
-            <h4 class="font-semibold text-white mb-4">Subscribe</h4>
+           <div>
+             <h4 class="font-semibold text-white mb-4">Subscribe</h4>
             <div class="flex">
               <input
                 type="email"
