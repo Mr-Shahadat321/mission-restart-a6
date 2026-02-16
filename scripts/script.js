@@ -55,6 +55,56 @@ const loadProduct = (category) => {
 //         "count": 679
 //     }
 // }
+const ProductDetails = (id) =>{
+       const url = `https://fakestoreapi.com/products/${id}`;
+       fetch(url)
+       .then(res => res.json())
+       .then(data => displayProductDetails(data))
+}
+
+const displayProductDetails = (product) =>{
+    const detailsBox = document.getElementById("details-container");
+    detailsBox.innerHTML = `
+          <div
+              class="bg-gray-50 rounded-xl p-2 shadow-sm hover:shadow-md transition"
+            >
+              <img class= "h-40 mx-auto object-contain" src="${product.image}"/>
+
+              <div class= "flex justify-between gap-2 py-2"> 
+                <span class="text-xs bg-indigo-100 text-indigo-600 px-2 py-1 rounded">
+                ${product.category}
+              </span>
+                <span class="text-xs px-2 py-1"><i class="fa-solid fa-star text-yellow-400"></i>
+                ${product.rating.rate}
+                (${product.rating.count})
+              </span>
+
+              
+              </div>
+
+              <h4 class="font-semibold text-gray-800 mt-3 truncate ..."">
+                ${product.title}
+              </h4>
+              <p class="font-bold text-gray-900 mt-2">${product.price}</p>
+
+              <div class="flex gap-3 mt-4">
+                <button 
+                  class="w-1/2 border border-gray-300 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-100" onclick="ProductDetails(${product.id})">
+                  Details
+                </button>
+                <button
+                  class="w-1/2 bg-indigo-600 text-white py-2 rounded-lg text-sm hover:bg-indigo-700"
+                >
+                  Add
+                </button>
+              </div>
+            </div>
+    
+    
+    `;
+    document.getElementById("details_box").showModal()
+}
+ 
 
 const loadProducts = (products) => {
   // console.log(products);
@@ -88,7 +138,7 @@ const loadProducts = (products) => {
 
               <div class="flex gap-3 mt-4">
                 <button 
-                  class="w-1/2 border border-gray-300 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-100" onclick="my_modal_5.showModal()">
+                  class="w-1/2 border border-gray-300 text-gray-600 py-2 rounded-lg text-sm hover:bg-gray-100" onclick="ProductDetails(${product.id})">
                   Details
                 </button>
                 <button
